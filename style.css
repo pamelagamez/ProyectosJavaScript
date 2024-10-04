@@ -1,11 +1,62 @@
 body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 400px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+}
+
+label {
+    margin-top: 10px;
+    display: block;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+#result {
+    margin-top: 20px;
+    text-align: center;
+}
+body {
     font-family: 'Verdana', sans-serif;
     background-color: #e9ecef;
     margin: 0;
     padding: 20px;
 }
 
-.calculadora-container {
+.sugeridor-container {
     max-width: 450px;
     margin: auto;
     background: white;
@@ -23,7 +74,7 @@ label {
     display: block;
 }
 
-input {
+input, select {
     width: 100%;
     padding: 12px;
     margin: 8px 0 18px 0;
@@ -45,8 +96,7 @@ button:hover {
     background-color: #0056b3;
 }
 
-#resultadoPromedio {
+#sugerenciaResultado {
     margin-top: 25px;
     text-align: center;
-    font-size: 1.2em;
 }

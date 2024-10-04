@@ -1,19 +1,34 @@
-document.getElementById('formularioCalculo').addEventListener('submit', function(event) {
-    event.preventDefault();
+document.getElementById('sugerenciaFormulario').addEventListener('submit', function(event) {
+    event.preventDefault(); // Evita el envío del formulario
 
-    // Obtener valores de las notas
-    const nota1 = parseFloat(document.getElementById('nota1').value);
-    const nota2 = parseFloat(document.getElementById('nota2').value);
-    const nota3 = parseFloat(document.getElementById('nota3').value);
+    // Obtener valores de la edad y el tipo
+    const edad = parseInt(document.getElementById('edad').value);
+    const tipo = document.getElementById('tipo').value;
+    let sugerencia = '';
 
-    // Calcular el promedio
-    const promedio = (nota1 + nota2 + nota3) / 3;
-
-    // Verificar si el promedio es igual o mayor a 35
-    const resultado = document.getElementById('resultadoPromedio');
-    if (promedio >= 35) {
-        resultado.innerHTML = `Promedio: ${promedio.toFixed(2)} - Aprobado`;
-    } else {
-        resultado.innerHTML = `Promedio: ${promedio.toFixed(2)} - Reprobado`;
+    // Sugerencias basadas en la edad y el tipo
+    switch (tipo) {
+        case 'accion':
+            sugerencia = edad < 18 ? 'Te sugerimos "Los Increíbles".' : 'Te sugerimos "Mad Max: Fury Road".';
+            break;
+        case 'comedia':
+            sugerencia = edad < 18 ? 'Te sugerimos "Los Goonies".' : 'Te sugerimos "Superbad".';
+            break;
+        case 'drama':
+            sugerencia = edad < 18 ? 'Te sugerimos "El Rey León".' : 'Te sugerimos "La La Land".';
+            break;
+        case 'terror':
+            sugerencia = edad < 18 ? 'Te sugerimos "Scooby-Doo".' : 'Te sugerimos "El Conjuro".';
+            break;
+        case 'musica':
+            sugerencia = edad < 18 ? 'Te sugerimos "High School Musical".' : 'Te sugerimos "Bohemian Rhapsody".';
+            break;
+        default:
+            sugerencia = 'Por favor, selecciona un tipo válido.';
     }
+
+    // Mostrar la sugerencia
+    const resultadoElemento = document.getElementById('sugerenciaResultado');
+    resultadoElemento.innerHTML = sugerencia;
 });
+
