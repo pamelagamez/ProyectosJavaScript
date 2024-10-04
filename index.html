@@ -1,27 +1,18 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Contador</title>
 </head>
 <body>
-    <div id="contenedor-calculadora">
-        <input type="text" id="input1" placeholder="Número 1">
-        <input type="text" id="input2" placeholder="Número 2">
-        <div id="operacion"></div>
-        
-        <!-- Botones de operaciones -->
-        <input type="button" value="C" class="clase1" onclick="borrarOperacion()">
-        <input type="button" value="+" class="clase" onclick="calcular('+')">
-        <input type="button" value="-" class="clase" onclick="calcular('-')">
-        <input type="button" value="*" class="clase" onclick="calcular('*')">
-        <input type="button" value="/" class="clase" onclick="calcular('/')">
-        <input type="button" value="√" class="clase" onclick="calcularRaiz()">
-        <input type="button" value="=" class="clase1" onclick="mostrarResultado()">
-    </div>
-    <script src="scripts.js"></script>
+    <input type="number" id="segundos">
+    <button onclick="contador()">Iniciar</button>
+    <button onclick="reiniciar()">Reiniciar</button>
+    <h3 id="salida"></h3>
+    <audio id="alarma">
+        <source src="y2mate.com - Las mañanitas con cepillin.mp3" type="audio/mpeg">
+    </audio>
+    <script src="scripts.js"></script>   
 </body>
 </html>
-
