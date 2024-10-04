@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="contenedor-calculadora">
+        <input type="text" id="input1" placeholder="Número 1">
+        <input type="text" id="input2" placeholder="Número 2">
+        <div id="operacion"></div>
+        
+        <!-- Botones de operaciones -->
+        <input type="button" value="C" class="clase1" onclick="borrarOperacion()">
+        <input type="button" value="+" class="clase" onclick="calcular('+')">
+        <input type="button" value="-" class="clase" onclick="calcular('-')">
+        <input type="button" value="*" class="clase" onclick="calcular('*')">
+        <input type="button" value="/" class="clase" onclick="calcular('/')">
+        <input type="button" value="√" class="clase" onclick="calcularRaiz()">
+        <input type="button" value="=" class="clase1" onclick="mostrarResultado()">
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
+
