@@ -3,17 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simulador de Dado</title>
     <link rel="stylesheet" href="style.css">
+    <title>Cálculo de Promedio de Actividades</title>
 </head>
 <body>
-    <div class="dado-container">
-        <h1>Simulador de Dado</h1>
-        <input type="number" id="num-caras" placeholder="Caras del dado" min="1" required>
-        <button onclick="tirarDado()">Tirar Dado</button>
-        <div id="resultado-dado"></div>
+    <div class="calculadora-container">
+        <h1>Cálculo de Promedio</h1>
+        <form id="formularioCalculo">
+            <label for="nota1">Nota 1:</label>
+            <input type="number" id="nota1" required>
+            <label for="nota2">Nota 2:</label>
+            <input type="number" id="nota2" required>
+            <label for="nota3">Nota 3:</label>
+            <input type="number" id="nota3" required>
+            <button type="submit">Calcular</button>
+        </form>
+        <div id="resultadoPromedio"></div>
     </div>
-    <script src="script.js"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>
+
 
